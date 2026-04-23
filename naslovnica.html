@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#E55811" />
+<title>CroDog — Hrvatski corndog, napravljen s ljubavlju</title>
+<meta name="description" content="Hand-dipped corndog. Draškovićeva 5, Zagreb. Ručno rađeno, svježe pripremljeno." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a href="#main" class="skip">Skoci na sadrzaj</a>
+
+<svg class="icon-sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 8h3l2-3h8l2 3h3v11H3z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M21 3c0 9-6 15-15 15-1.5 0-3-.5-3-.5C3 9 9 3 18 3h3z"/><path d="M3 21c4-7 9-12 15-15"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2s4 4 4 9a4 4 0 0 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-7-6-12-6-12z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2 9 9l-7 3 7 3 3 7 3-7 7-3-7-3z"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="6" cy="9" r="2"/><circle cx="10" cy="6" r="2"/><circle cx="14" cy="6" r="2"/><circle cx="18" cy="9" r="2"/><path d="M12 12c-3 0-6 2-6 5a3 3 0 0 0 3 3c1 0 2-.5 3-.5s2 .5 3 .5a3 3 0 0 0 3-3c0-3-3-5-6-5z"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="nav-rain" aria-hidden="true">
+    <svg class="mini-dog" style="--x:4%;  --d:0s;    --r:-42deg; --dur:6.2s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#E55811"/><rect x="3" y="3" width="14" height="28" rx="6" fill="none" stroke="#B83F05" stroke-width="1"/></svg>
+    <svg class="mini-dog" style="--x:11%; --d:1.4s;  --r:25deg;  --dur:7.4s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#FA7232"/></svg>
+    <svg class="mini-dog" style="--x:19%; --d:3.1s;  --r:-55deg; --dur:5.8s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#E55811"/></svg>
+    <svg class="mini-dog" style="--x:27%; --d:2.2s;  --r:38deg;  --dur:6.9s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#B83F05"/></svg>
+    <svg class="mini-dog" style="--x:74%; --d:0.6s;  --r:-30deg; --dur:7.1s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#FA7232"/></svg>
+    <svg class="mini-dog" style="--x:82%; --d:2.8s;  --r:60deg;  --dur:6.4s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#E55811"/></svg>
+    <svg class="mini-dog" style="--x:89%; --d:1.9s;  --r:-20deg; --dur:5.6s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#FA7232"/></svg>
+    <svg class="mini-dog" style="--x:96%; --d:3.7s;  --r:48deg;  --dur:7.8s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#B83F05"/></svg>
+  </div>
+  <div class="nav-inner">
+    <a href="naslovnica.html" class="nav-logo">CroDog</a>
+    <div class="nav-links">
+      <a href="naslovnica.html" class="nav-link active">Naslovnica</a>
+      <a href="menu.html" class="nav-link">Menu</a>
+      <a href="onama.html" class="nav-link">O nama</a>
+      <a href="kontakt.html" class="nav-link">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="home-hero" aria-labelledby="hero-h">
+    <video class="hero-image" src="assets/hero.mp4" autoplay muted loop playsinline preload="auto" poster="assets/hero-main.jpeg" aria-label="CroDog — prvi corndog u Hrvatskoj"></video>
+    <div class="hero-content">
+      <h1 id="hero-h">First <em>CornDog</em> Place<br>in <em>Croatia</em>.</h1>
+      <aside class="hero-cta" aria-label="Build Your Own CornDog">
+        <h2 class="hero-cta-title"><em class="cta-num">4</em> koraka.<br>Tvoj dog.</h2>
+        <div class="hero-cta-chips" aria-hidden="true">
+          <span>Filling</span><span class="dot">·</span><span>Crust</span><span class="dot">·</span><span>Topping</span><span class="dot">·</span><span>Dips</span>
+        </div>
+        <p class="hero-cta-copy">Od punila do dipa — svaki corndog je tvoj, rađen za tebe.</p>
+        <a class="btn orange hero-cta-btn" href="menu.html#build">Složi svoj CornDog <span class="arrow">→</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec-c" aria-labelledby="sec-c-h">
+    <div class="sec-c-inner">
+      <div class="sec-c-text">
+        <div class="ch-label">Nasa prica</div>
+        <blockquote id="sec-c-h">"New York mi je dao <em>ideju</em>. Zagreb je dobio svoj corndog."</blockquote>
+        <p>Bruno je putovao u New York, probao prvi corndog i zaljubio se u ideju. Kad se vratio u Zagreb, shvatio je — takvog se ovdje ne može pojesti. Zajedno s Blažom pokrenuo je CroDog.</p>
+        <p>Koncept je jednostavan: <strong>Build Your Own</strong>. Ti biraš filling, crust, topping, dip — mi pečemo. Od klasičnih hrenovki do mozzarelle i vege opcija, svaki je corndog malo tvoj.</p>
+        <div class="cite">— Bruno &amp; Blaž · Vlasnici, CroDog</div>
+      </div>
+      <div class="sec-c-photo" aria-label="Foto: Bruno i Blaz">
+        <img src="assets/owners-bruno-blaz.jpeg" alt="Bruno i Blaz, vlasnici CroDog" />
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-b" aria-labelledby="sec-b-h">
+    <div class="sec-b-head">
+      <h2 id="sec-b-h"><em>4</em> koraka.<br>Tvoj dog.</h2>
+      <div class="combo-stats" aria-label="Broj opcija po koraku">
+        <div class="combo-row">
+          <div class="combo-stat"><span class="cs-num">7</span><span class="cs-lbl">Fillinga</span></div>
+          <span class="combo-x">×</span>
+          <div class="combo-stat"><span class="cs-num">6</span><span class="cs-lbl">Crustova</span></div>
+          <span class="combo-x">×</span>
+          <div class="combo-stat"><span class="cs-num">5</span><span class="cs-lbl">Toppinga</span></div>
+          <span class="combo-x">×</span>
+          <div class="combo-stat"><span class="cs-num">12</span><span class="cs-lbl">Umaka</span></div>
+        </div>
+        <div class="combo-total">
+          <span class="ct-num">13.860</span>
+          <span class="ct-lbl">mogućih kombinacija</span>
+        </div>
+      </div>
+    </div>
+    <div class="sec-b-steps" role="list">
+      <div class="sec-b-step" role="listitem">
+        <div class="step-no">Korak 01</div>
+        <div class="step-photo" aria-label="Foto: filling"><img src="assets/step-filling.png" alt="Filling opcije" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;"></div>
+        <h3>Filling</h3>
+        <p>Pileća hrenovka, debrecinka, vege, mozzarella, hrenovka punjena sirom — 7 opcija.</p>
+      </div>
+      <div class="sec-b-step" role="listitem">
+        <div class="step-no">Korak 02</div>
+        <div class="step-photo" aria-label="Foto: crust"><img src="assets/step-crust.png" alt="Crust opcije" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;"></div>
+        <h3>Crust</h3>
+        <p>Panko, krumpir, kvinoja popcorn, Pringles sour cream, Corn Flakes, Nacho. Odaberi.</p>
+      </div>
+      <div class="sec-b-step" role="listitem">
+        <div class="step-no">Korak 03</div>
+        <div class="step-photo" aria-label="Foto: umaci"><img src="assets/step-dips.png" alt="Dips i umaci" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;"></div>
+        <h3>Dip &amp; Sauce</h3>
+        <p>House umaci — sweet &amp; spicy mayo, garlic mayo, honey mustard. Plus 7 klasika.</p>
+      </div>
+      <div class="sec-b-step" role="listitem">
+        <div class="step-no">Korak 04</div>
+        <div class="step-photo" aria-label="Foto: topping"><img src="assets/step-topping.png" alt="Topping opcije" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;"></div>
+        <h3>Topping</h3>
+        <p>Prženi luk, nacho, Pringles sour cream, plavi i crveni takis — po želji.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-a" aria-labelledby="sec-a-h">
+    <div class="panel-l">
+      <div>
+        <div class="top"><span class="bestseller-pill">★ Naš bestseller</span></div>
+        <h2 id="sec-a-h">Half &amp; <em>Half</em>.<br>Za one koji ne biraju.</h2>
+        <p>Pola sir, pola debrecinka. Krumpir crust, spicy mayo. Najtraženi kombo u dućanu — zato što nema krivog zalogaja. Svaki corndog se radi na narudžbu, pred tobom.</p>
+        <a class="btn orange" href="menu.html#sig-menu" style="margin-bottom:40px;">Pogledaj meni <span class="arrow">→</span></a>
+      </div>
+      <div class="details">
+        <span>Cijena<em>6,10 €</em></span>
+        <span>Filling<em>Sir + Debrecinka</em></span>
+        <span>Crust<em>Krumpir</em></span>
+        <span>Sauce<em>Spicy mayo</em></span>
+      </div>
+    </div>
+    <div class="panel-r img-ph" aria-label="Foto Half & Half corndoga">
+      <div class="watermark" aria-hidden="true">Bestseller</div>
+      <div class="img-ph-inner">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h3l2-3h8l2 3h3v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <div class="img-ph-code">assets/bestseller-half-and-half.jpg</div>
+        <div class="img-ph-desc">Half &amp; Half corndog — pola-pola presjek</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-d" aria-labelledby="sec-d-h">
+    <div class="sec-d-inner">
+      <div class="sec-d-text">
+        <div class="ch-label">Dođi probati</div>
+        <h2 id="sec-d-h">Draskoviceva <em>5</em>.<br>Vidimo se.</h2>
+        <p>Centar Zagreba, par koraka od glavnog trga. Najvece guzve su pri otvaranju i kraj smjene — za mir dodji izmedu 16 i 17h.</p>
+        <ul class="sec-d-hours">
+          <li><span class="day">Pon – Sub</span><span class="time">14:00 — 22:00</span></li>
+          <li><span class="day">Nedjelja</span><span class="closed">Zatvoreno</span></li>
+        </ul>
+        <a href="https://maps.google.com/?q=Draškovićeva+5+Zagreb" target="_blank" rel="noopener" class="btn orange">Otvori mapu <span class="arrow">→</span></a>
+      </div>
+      <div class="sec-d-wrap">
+        <img class="sec-d-mascot" src="assets/mascot.png" alt="" aria-hidden="true" />
+        <div class="sec-d-map" aria-label="Mapa lokacije CroDog, Draškovićeva 5 Zagreb">
+          <img src="assets/shop-exterior.webp" alt="CroDog ducan, Draškovićeva 5, Zagreb" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-loc">
+    <div class="foot-loc-inner">
+      <div class="fl-block">
+        <h4><svg class="ico" style="width:14px;height:14px"><use href="#i-pin"/></svg> Adresa</h4>
+        <p class="fl-main">Draškovićeva ul. 5, 10000 Zagreb</p>
+        <a href="https://maps.google.com/?q=Draškovićeva+5+Zagreb" target="_blank" rel="noopener" class="fl-link">Otvori u Google Maps →</a>
+      </div>
+      <div class="fl-block">
+        <h4><svg class="ico" style="width:14px;height:14px"><use href="#i-clock"/></svg> Radno vrijeme</h4>
+        <p class="fl-main">Pon–Pet · 11:00–22:00</p>
+        <p class="fl-sub">Sub 11–23h · Ned zatvoreno</p>
+      </div>
+      <div class="fl-block">
+        <h4><svg class="ico" style="width:14px;height:14px"><use href="#i-mail"/></svg> Javi se</h4>
+        <p class="fl-main"><a href="mailto:crodog.hr@gmail.com">crodog.hr@gmail.com</a></p>
+        <p class="fl-sub">Pratite nas na Instagramu za eventove.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a href="naslovnica.html" class="foot-logo">CroDog</a>
+      <p class="tag-line">Prvi corndog place u Hrvatskoj. Build your own — ti biraš, mi pečemo.</p>
+    </div>
+    <div>
+      <h4>Stranica</h4>
+      <a href="naslovnica.html">Naslovnica</a>
+      <a href="menu.html">Menu</a>
+      <a href="onama.html">O nama</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div>
+      <h4>Pratite nas</h4>
+      <a href="https://www.instagram.com/crodog_hr/" target="_blank" rel="noopener">Instagram · @crodog_hr</a>
+      <a href="https://www.tiktok.com/@crodog_hr" target="_blank" rel="noopener">TikTok · @crodog_hr</a>
+      <a href="https://www.facebook.com/profile.php?id=61584961055950" target="_blank" rel="noopener">Facebook · CroDog</a>
+    </div>
+    <div>
+      <h4>Javi se</h4>
+      <a href="mailto:crodog.hr@gmail.com">crodog.hr@gmail.com</a>
+      <a href="kontakt.html">Kontakt forma</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 CroDog · Zagreb</span>
+    <span>Prvi CornDog place u Hrvatskoj</span>
+    <img class="foot-mascot" src="assets/mascot.png" alt="" aria-hidden="true" />
+  </div>
+</footer>
+
+<script>
+(function() {
+  const nav = document.querySelector('.nav');
+  let lastY = 0, ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (y > lastY && y > 80) nav.classList.add('hidden');
+        else nav.classList.remove('hidden');
+        lastY = y; ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>
