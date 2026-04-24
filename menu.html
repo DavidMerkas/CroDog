@@ -45,6 +45,7 @@
     <svg class="mini-dog" style="--x:96%; --d:3.7s;  --r:48deg;  --dur:7.8s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#B83F05"/></svg>
   </div>
   <div class="nav-main">
+    <button class="nav-burger" aria-label="Otvori izbornik" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links left">
       <a href="index.html" class="nav-link">Naslovnica</a>
       <a href="menu.html" class="nav-link active">Menu</a>
@@ -307,6 +308,11 @@
 <script>
 (function() {
   const nav = document.querySelector('.nav');
+  const burger = document.querySelector('.nav-burger');
+  if (burger) burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
   let lastY = 0, ticking = false;
   window.addEventListener('scroll', () => {
     if (!ticking) {
@@ -332,7 +338,32 @@ document.querySelectorAll('.b-section').forEach(section => {
       const name = btn.dataset.name;
       const price = parseFloat(btn.dataset.price);
       const limit = LIMITS[step];
-      if (limit === 1) {
+      const isArrayState = Array.isArray(state[step]);
+
+      if (isArrayState) {
+        const arr = state[step];
+        const idx = arr.findIndex(x => x.name === name);
+        if (idx >= 0) {
+          arr.splice(idx, 1);
+          btn.classList.remove('selected');
+          btn.setAttribute('aria-pressed', 'false');
+        } else {
+          if (arr.length >= limit) {
+            if (limit === 1) {
+              section.querySelectorAll('.opt.selected').forEach(o => {
+                o.classList.remove('selected');
+                o.setAttribute('aria-pressed', 'false');
+              });
+              arr.length = 0;
+            } else {
+              return;
+            }
+          }
+          arr.push({ name, price });
+          btn.classList.add('selected');
+          btn.setAttribute('aria-pressed', 'true');
+        }
+      } else {
         section.querySelectorAll('.opt').forEach(o => {
           o.classList.remove('selected');
           o.setAttribute('aria-checked', 'false');
@@ -340,18 +371,6 @@ document.querySelectorAll('.b-section').forEach(section => {
         btn.classList.add('selected');
         btn.setAttribute('aria-checked', 'true');
         state[step] = { name, price };
-      } else {
-        const arr = state[step];
-        const idx = arr.findIndex(x => x.name === name);
-        if (idx >= 0) {
-          arr.splice(idx, 1);
-          btn.classList.remove('selected');
-          btn.setAttribute('aria-pressed', 'false');
-        } else if (arr.length < limit) {
-          arr.push({ name, price });
-          btn.classList.add('selected');
-          btn.setAttribute('aria-pressed', 'true');
-        }
       }
       renderBoard();
     });

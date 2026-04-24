@@ -45,6 +45,7 @@
     <svg class="mini-dog" style="--x:96%; --d:3.7s;  --r:48deg;  --dur:7.8s;" viewBox="0 0 20 44"><line x1="10" y1="30" x2="10" y2="44" stroke="#6b4423" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="14" height="28" rx="6" fill="#B83F05"/></svg>
   </div>
   <div class="nav-main">
+    <button class="nav-burger" aria-label="Otvori izbornik" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links left">
       <a href="index.html" class="nav-link active">Naslovnica</a>
       <a href="menu.html" class="nav-link">Menu</a>
@@ -106,14 +107,14 @@
         </div>
         <div class="combo-total">
           <span class="ct-num">13.860</span>
-          <span class="ct-lbl">mogućih kombinacija</span>
+          <span class="ct-lbl">mogućih kombinacija CornDogova</span>
         </div>
       </div>
     </div>
     <div class="sec-b-steps" role="list">
       <div class="sec-b-step" role="listitem">
         <div class="step-no">Korak 01</div>
-        <div class="step-photo" aria-label="Foto: filling"><img src="assets/step-filling.png" alt="Filling opcije" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;"></div>
+        <div class="step-photo" aria-label="Foto: filling"><img src="assets/step-filling.jpeg" alt="Filling opcije" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;transform:scale(1.25);transform-origin:center;"></div>
         <h3>Filling</h3>
         <p>Pileća hrenovka, debrecinka, vege, mozzarella, hrenovka punjena sirom — 7 opcija.</p>
       </div>
@@ -138,27 +139,37 @@
     </div>
   </section>
 
-  <section class="sec-a" aria-labelledby="sec-a-h">
-    <div class="panel-l">
-      <div>
-        <div class="top"><span class="bestseller-pill">★ Naš bestseller</span></div>
-        <h2 id="sec-a-h">Half &amp; <em>Half</em>.<br>Za one koji ne biraju.</h2>
-        <p>Pola sir, pola debrecinka. Krumpir crust, spicy mayo. Najtraženi kombo u dućanu — zato što nema krivog zalogaja. Svaki corndog se radi na narudžbu, pred tobom.</p>
-        <a class="btn orange" href="menu.html#sig-menu" style="margin-bottom:40px;">Pogledaj meni <span class="arrow">→</span></a>
+  <section class="sec-half" aria-labelledby="sec-a-h">
+    <div class="sec-half-left">
+      <div class="sec-half-text">
+        <span class="sec-half-pill">★ Nas bestseller</span>
+        <h2 id="sec-a-h" class="sec-half-title">Half &amp; <em>Half</em>.<br>Za one koji ne biraju.</h2>
+        <p class="sec-half-desc">Pola sir, pola debrecinka. Krumpir crust, spicy mayo. Najtraženi kombo u dućanu — zato što nema krivog zalogaja. Svaki corndog se radi na narudžbu, pred tobom.</p>
+        <a class="btn orange sec-half-cta" href="menu.html#sig-menu">Pogledaj meni <span class="arrow">→</span></a>
       </div>
-      <div class="details">
+      <div class="sec-half-photo" aria-label="Half & Half bestseller">
+        <img src="assets/hero-half-and-half.png" alt="Half & Half corndog" loading="lazy">
+        <span class="sec-half-tag">Bestseller ★ Half &amp; Half</span>
+      </div>
+      <div class="sec-half-details">
         <span>Cijena<em>6,10 €</em></span>
         <span>Filling<em>Sir + Debrecinka</em></span>
         <span>Crust<em>Krumpir</em></span>
         <span>Sauce<em>Spicy mayo</em></span>
       </div>
     </div>
-    <div class="panel-r img-ph" aria-label="Foto Half & Half corndoga">
-      <div class="watermark" aria-hidden="true">Bestseller</div>
-      <div class="img-ph-inner">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h3l2-3h8l2 3h3v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
-        <div class="img-ph-code">assets/bestseller-half-and-half.jpg</div>
-        <div class="img-ph-desc">Half &amp; Half corndog — pola-pola presjek</div>
+    <div class="sec-half-right" aria-label="Galerija corndoga">
+      <div class="sec-half-gal">
+        <img src="assets/gal-1.jpg" alt="Corndog" loading="lazy">
+      </div>
+      <div class="sec-half-gal">
+        <img src="assets/gal-2.jpeg" alt="Corndog" loading="lazy">
+      </div>
+      <div class="sec-half-gal">
+        <img src="assets/gal-3.jpeg" alt="Corndog" loading="lazy">
+      </div>
+      <div class="sec-half-gal">
+        <img src="assets/gal-4.webp" alt="Corndog" loading="lazy">
       </div>
     </div>
   </section>
@@ -178,7 +189,7 @@
       <div class="sec-d-wrap">
         <img class="sec-d-mascot" src="assets/mascot.png" alt="" aria-hidden="true" />
         <div class="sec-d-map" aria-label="Mapa lokacije CroDog, Draškovićeva 5 Zagreb">
-          <img src="assets/shop-exterior.webp" alt="CroDog ducan, Draškovićeva 5, Zagreb" />
+          <img src="assets/shop-exterior.jpg" alt="CroDog ducan, Draškovićeva 5, Zagreb" />
         </div>
       </div>
     </div>
@@ -240,6 +251,11 @@
 <script>
 (function() {
   const nav = document.querySelector('.nav');
+  const burger = document.querySelector('.nav-burger');
+  if (burger) burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
   let lastY = 0, ticking = false;
   window.addEventListener('scroll', () => {
     if (!ticking) {
