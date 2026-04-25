@@ -1524,18 +1524,41 @@ html, body { max-width: 100%; overflow-x: hidden; }
   padding: 22px;
   display: flex; align-items: flex-start; gap: 14px;
   box-shadow: 4px 4px 0 var(--ink);
+  cursor: pointer;
+  position: relative;
+  transition: transform .35s cubic-bezier(.2,.8,.4,1), box-shadow .35s cubic-bezier(.2,.8,.4,1);
 }
 .cs:nth-child(1) { transform: rotate(1.2deg); }
 .cs:nth-child(2) { transform: rotate(-1deg); }
 .cs:nth-child(3) { transform: rotate(.8deg); }
 .cs:nth-child(4) { transform: rotate(-1.4deg); }
+.cs:hover {
+  transform: rotate(0deg) translate(-3px, -5px);
+  box-shadow: 9px 11px 0 var(--ink);
+}
+.cs:active {
+  transform: rotate(0deg) translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--ink);
+  transition-duration: .08s;
+}
 .cs .ic-wrap {
   width: 40px; height: 40px; border-radius: 10px;
   background: var(--orange); color: white;
   border: 2px solid var(--ink);
   display: inline-flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+  transition: transform .4s cubic-bezier(.2,.8,.4,1), box-shadow .3s;
 }
+.cs:hover .ic-wrap {
+  transform: rotate(-12deg) scale(1.12);
+  box-shadow: 0 4px 12px rgba(24,20,16,.25);
+}
+.cs:nth-child(2):hover .ic-wrap { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: var(--ink); }
+.cs:hover .v a { color: var(--orange); }
+.cs:nth-child(2):hover .v a { color: #dc2743; }
+.cs:nth-child(3):hover .v a { color: #000; }
+.cs:nth-child(4):hover .v a { color: #1877F2; }
+.cs .v a { transition: color .25s; }
 .cs:nth-child(2) .ic-wrap { background: var(--ink); color: white; }
 .cs:nth-child(3) .ic-wrap { background: #000; color: white; }
 .cs:nth-child(4) .ic-wrap { background: #1877F2; color: white; }
@@ -1546,6 +1569,14 @@ html, body { max-width: 100%; overflow-x: hidden; }
 }
 .cs .v { font-family: 'DM Sans'; font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--ink); margin-bottom: 4px; }
 .cs .v a { color: var(--ink); text-decoration: none; }
+.cs .v a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  z-index: 1;
+}
+.cs > * { position: relative; z-index: 2; }
 .cs .v a:hover { color: var(--orange); }
 .cs .note { font-size: 13px; color: var(--ink-3); }
 
