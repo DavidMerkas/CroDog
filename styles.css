@@ -2020,7 +2020,14 @@ html, body { max-width: 100%; overflow-x: hidden; }
 }
 @media (max-width: 900px) {
   .foot-mascot { display: none; }
-  .sec-d-mascot { left: auto; right: 8px; bottom: -8px; width: 110px; }
+  .sec-d-mascot {
+    left: -36px; right: auto;
+    bottom: auto; top: 100%;
+    width: 100px;
+    transform: translateY(-158%) rotate(-8deg);
+  }
+  .sec-d-map { max-width: 88%; margin: 0 auto; }
+  .sec-d-wrap { padding-bottom: 70px; }
   .foot { padding: 0 16px 24px; }
   .foot-bottom { text-align: center; padding: 24px 8px 0; }
   .foot-bottom span { word-break: break-word; }
